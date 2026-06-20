@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registro</title>
+        <link rel="stylesheet"  href="./inicio.css">
+        <link rel="stylesheet" href="./registro.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <a href="./inicio.html">  
+            <img src="./logo tornill.1.jpg" alt="Logo" class="logo">
+        </a>
+            <div class="navbar-options">
+             <a  class="navbar-options" href="./iniciar_sesion.html">iniciar sesion</a>
+             <a  class="navbar-options" href="./registro.html">registro</a>
+             <a  class="navbar-options" href="./acerca_de.html">acerca de</a>
+            <a  class="navbar-options" href="./Dashboard.html">Dashboard</a>
+            </div>
+        </nav>
+        <section class="registro">
+        <div class="from-container">
+        <form action="" class="from" id ="from">
+            <h3 class="from-title">Registro</h3>
+            <p class="from-text">ingrese sus datos para crear una cuenta </p>
+            <input
+             id="name"
+             type="text" 
+             name="name"
+             class="from-input"
+             placeholder="ingrese su nombre"
+             required
+              >
+            <input
+             id="email"
+             type="email" 
+             name="email"
+             class="from-input"
+             placeholder="ingrese Correo Electrónico"
+             required
+              >
+            <input
+             id="password"
+             type="password"
+             name="password"
+             class="from-input"
+             placeholder="ingrese Contraseña"
+             required
+             >
+            <button class="from-boton" type="submit">Registrarse</button>
+         </form>
+            </div>
+        </section>
+        <script>
+         var form = document.getElementById("from");
+         form.addEventListener("submit", function(event){
+                event.preventDefault();
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;   
+           alert("has registrado tu cuenta con el nombre " + name + ", correo " + email + " y contraseña: " + "se a guardado correctamente");});  
+        </script>
+    </body> 
+</html>

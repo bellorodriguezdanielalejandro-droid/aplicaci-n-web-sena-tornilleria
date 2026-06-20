@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Iniciar Sesión</title>
+        <link rel="stylesheet"  href="./inicio.css">
+        <link rel="stylesheet" href="./iniciar_sesion.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <a href="./inicio.html">  
+            <img src="./logo tornill.1.jpg" alt="Logo" class="logo">
+        </a>
+            <div class="navbar-options">
+             <a  class="navbar-options" href="./iniciar_sesion.html">iniciar sesion</a>
+             <a  class="navbar-options" href="./registro.html">registro</a>
+             <a  class="navbar-options" href="./acerca_de.html">acerca de</a>
+             <a  class="navbar-options" href="./Dashboard.html">Dashboard</a>
+            </div>
+        </nav>
+        <section class="registro">
+        <div class="from-container">
+        <form action="" class="from" id ="from">
+            <h2 class="from-title">Iniciar Sesión</h2>
+            <p class="from-text">ingrese sus credenciales </p>
+            <input
+             id="email"
+             type="email" 
+             name="email"
+             class="from-input"
+             placeholder="ingrese Correo Electrónico"
+             required
+              >
+            <input
+             id="password"
+             type="password"
+             name="password"
+             class="from-input"
+             placeholder="ingrese Contraseña"
+             required
+             >
+            <button class="from-boton" type="submit">Iniciar Sesión</button>
+        </form>
+            </div>
+        </section>
+        <script>
+         var form = document.getElementById("from");
+         form.addEventListener("submit", function(event){
+                event.preventDefault();
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;   
+           alert("has iniciado sesion con el correo " + email + " y la contraseña: " + "es corecta");});  
+        </script>
+    </body> 
+</html>
